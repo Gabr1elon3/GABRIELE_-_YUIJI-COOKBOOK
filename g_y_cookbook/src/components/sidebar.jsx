@@ -10,14 +10,15 @@ function Sidebar() {
         justifyContent: "center",  // Center links horizontally
         gap: "40px",                // Space out the links
         padding: '20px',
-        backgroundColor: "#f5f5f5", // Optional: Adjust background color
+        backgroundColor: "#ff7700",
+        borderRadius: 40 // Optional: Adjust background color
       }}
     >
       <Link
         to="/"
         style={{
           textDecoration: "none",
-          color: "#2c3e50",
+          color: "#000000",
           fontSize: "1.5rem",
         }}
       >
@@ -27,7 +28,7 @@ function Sidebar() {
         to="/about"
         style={{
           textDecoration: "none",
-          color: "#2c3e50",
+          color: "#000000",
           fontSize: "1.5rem",
         }}
       >
@@ -37,7 +38,7 @@ function Sidebar() {
         to="/contact"
         style={{
           textDecoration: "none",
-          color: "#2c3e50",
+          color: "#000000",
           fontSize: "1.5rem",
         }}
       >
