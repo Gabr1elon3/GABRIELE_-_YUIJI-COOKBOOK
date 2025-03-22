@@ -13,13 +13,11 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Sidebar />
-      <div className="content">
+      
+      <div className="content" style={{display: "flex", border:"1px solid black"}}>
         {/* Main content can go here */}
-      </div>
-      <Footer />
-
-      <h2>Recipes</h2>
+        <Sidebar />
+        <div><h2>Recipes</h2>
       <ul>
         {recipesArr.map((recipe) => {
 
@@ -49,7 +47,12 @@ function App() {
          
          
         })}
-      </ul>
+      </ul></div>
+        
+      </div>
+      <Footer />
+
+      
 
     </div>
   );
