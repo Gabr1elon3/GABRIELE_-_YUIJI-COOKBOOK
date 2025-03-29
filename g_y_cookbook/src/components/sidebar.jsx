@@ -39,6 +39,18 @@ function Sidebar() {
       >
         About
       </Link>
+
+      <Link
+        to="/details"
+        style={{
+          textDecoration: "none",
+          color: "#000000",
+          fontSize: "1.5rem",
+        }}
+      >
+        Details
+      </Link>
+
       <Link
         to="/contact"
         style={{

@@ -1,0 +1,26 @@
+.mainDiv {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make sure it fills the screen vertically */
+}
+.recipes-container {
+    padding-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 20px;
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center items vertically */
+}
+.recipe-item {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 35px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 150px; /* Adjust height as needed */
+}

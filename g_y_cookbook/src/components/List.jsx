@@ -14,10 +14,17 @@ function List ({recipes}){
   
 
     return(
-        <ul>
+      
+        <ul className="recipes-container">
         {newRecipes.map((recipe) => {
           return (
+            
+           
+            
             <RecipeCard recipe ={recipe} deleteRecipe={deleteRecipe}/> 
+            
+
+            
           )
         })}
       </ul>
