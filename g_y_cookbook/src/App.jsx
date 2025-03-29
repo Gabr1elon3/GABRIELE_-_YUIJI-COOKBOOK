@@ -9,7 +9,7 @@ import { Home } from './pages/Home';
 import { ItemDetails } from './pages/ItemDetails';
 import { About } from './pages/About';
 
-import  "./App.css"
+import "./App.css"
 
 
 function App() {
