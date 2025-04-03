@@ -1,5 +1,4 @@
 import RecipeCard from "./RecipeCard"
-import { useState } from "react"
 
 function List ({recipes}){
 
