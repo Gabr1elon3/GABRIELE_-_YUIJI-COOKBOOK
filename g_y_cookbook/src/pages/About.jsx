@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-export function About (){
-    return(
-
-        <>
-            Nosotros
-        </>
-    )
-=======
-export default function About() {
+export function About() {
     return (
         <div>
             <h1>About our Mini-project</h1>
@@ -20,5 +11,4 @@ export default function About() {
             </h2>
         </div>
     );
->>>>>>> 68c536b92998bf5f2d22a255b2e8305a7fc3dd7a
 }
