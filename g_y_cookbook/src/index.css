@@ -24,3 +24,13 @@
     align-items: center; /* Center content vertically */
     height: 150px; /* Adjust height as needed */
 }
+.rainbow-text {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem; /* Adjust size */
+    font-weight: bold;
+  }
+  .contact-container {
+    padding-top: 0px; /* Adjust the top padding to move the entire container down if needed */
+  }

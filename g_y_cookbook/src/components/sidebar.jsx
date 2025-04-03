@@ -6,17 +6,22 @@ function Sidebar() {
     <div
       className="sidebar"
       style={{
+        position: "fixed", // Keeps it always visible when scrolling
+        left: "-50px", // Moves it slightly to the left
+        top: "150px", // Adjusts vertical position
         display: "flex",
-        justifyContent: "space-evenly",  // Center links horizontally
-        gap: "40px",                // Space out the links
+        flexDirection: "column", // Stack links vertically
+        alignItems: "center", // Center links horizontally
+        gap: "20px", // Adds space between links
         padding: '20px',
         backgroundColor: "#ff7700",
-        borderRadius: 40, // Optional: Adjust background color
-        flexDirection:"column",
-        fontSize: "3.5rem", color: "#2c3e50", fontFamily: "cursive",
-        fontWeight: "bold", 
-        width:"350px",
-        height:"100vh",
+        borderRadius: "40px", // Makes edges round
+        fontSize: "3.5rem",
+        color: "#2c3e50",
+        fontFamily: "cursive",
+        fontWeight: "bold",
+        width: "250px", // Sidebar width
+        height: "300px", // Adjusts height to avoid stretching
       }}
     >
       <Link
@@ -48,7 +53,7 @@ function Sidebar() {
           fontSize: "1.5rem",
         }}
       >
-        Details
+        Details 
       </Link>
 
       <Link
@@ -66,4 +71,3 @@ function Sidebar() {
 }
 
 export default Sidebar;
-

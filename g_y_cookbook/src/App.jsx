@@ -11,6 +11,8 @@ import { About } from './pages/About';
 
 import "./App.css"
 import RecipesJson from './recipes.json'
+import { Contact } from './pages/Contact';
+import { Details } from './pages/Details';
 
 
 function App() {
@@ -42,6 +44,8 @@ function App() {
         <Route path="/" element={<Home recipes={recipes}/>}></Route>
         <Route path="/details/:id" element={<ItemDetails />}></Route>
         <Route path="/about" element={<About />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/details" element={<Details/>}></Route>
       
       </Routes>
 
