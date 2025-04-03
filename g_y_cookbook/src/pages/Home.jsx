@@ -1,15 +1,13 @@
-import List from "../components/list"
-import recipes from "../recipes.json"
+import List from "../components/List"
 
 export function Home (){
 
-    const recetas = recipes;
     return(
 
         <>
             
       <h2>Recipes</h2>
-      <List recipes = {recetas}/>
+      <List />
         </>
     )
 }

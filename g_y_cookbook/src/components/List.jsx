@@ -1,4 +1,5 @@
 import RecipeCard from "./RecipeCard"
+import { useState } from "react"
 
 function List ({recipes}){
 
@@ -6,24 +7,16 @@ function List ({recipes}){
     const [ newRecipes, setNewRecipes] = useState (recipes)
 
     const deleteRecipe = (id) => {
-      
       const newRecipesArr = newRecipes.filter(item => item.id !== id)
       setNewRecipes(newRecipesArr)
     }
   
-
     return(
       
         <ul className="recipes-container">
         {newRecipes.map((recipe) => {
-          return (
-            
-           
-            
+          return (  
             <RecipeCard recipe ={recipe} deleteRecipe={deleteRecipe}/> 
-            
-
-            
           )
         })}
       </ul>
