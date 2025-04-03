@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/navbar';
 import Sidebar from './components/sidebar';
 import Footer from './components/footer';
@@ -10,10 +10,16 @@ import { ItemDetails } from './pages/ItemDetails';
 import { About } from './pages/About';
 
 import "./App.css"
+import RecipesJson from './recipes.json'
 
 
 function App() {
 
+  const [recipes, setRecipes] = useState(RecipesJson)
+
+   function addRecipe (recipe) {
+    setRecipes([...recipes, recipe])
+   }
   
 
  
@@ -35,7 +41,7 @@ function App() {
 
       <Routes>
 
-        <Route path="/" element={<Home/>}></Route>
+        <Route path="/" element={<Home recipes={recipes} addRecipe ={addRecipe}/>}></Route>
         <Route path="/details/:id" element={<ItemDetails />}></Route>
         <Route path="/about" element={<About />}></Route>
       
