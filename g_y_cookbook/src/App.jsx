@@ -1,20 +1,25 @@
 import { Routes, Route } from 'react-router-dom';
 
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import Navbar from './components/navbar';
 import Sidebar from './components/sidebar';
 import Footer from './components/footer';
 
 import { Home } from './pages/Home';
 import { ItemDetails } from './pages/ItemDetails';
-import  About  from './pages/About';
-import Dashboard from './pages/dashboard';
-import "./App.css"
+import { About } from './pages/About';
 
-import recipesData from "./recipes.json"
+import "./App.css"
+import RecipesJson from './recipes.json'
 
 
 function App() {
+
+  const [recipes, setRecipes] = useState(RecipesJson)
+
+
+  
+
  
   return (
     <div className="App">
@@ -34,10 +39,9 @@ function App() {
 
       <Routes>
 
-        <Route path="/" element={<Home/>}></Route>
+        <Route path="/" element={<Home recipes={recipes}/>}></Route>
         <Route path="/details/:id" element={<ItemDetails />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/dashboard" element={<Dashboard />}></Route>
       
       </Routes>
 
