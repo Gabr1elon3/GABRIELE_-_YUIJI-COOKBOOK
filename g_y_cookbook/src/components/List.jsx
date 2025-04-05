@@ -1,24 +1,16 @@
 import RecipeCard from "./RecipeCard"
-import { useState } from "react"
 
-function List ({recipes}){
+
+function List ({recipes, onDelete}){
 
  
-    const [ newRecipes, setNewRecipes] = useState (recipes)
-
-    const deleteRecipe = (id) => {
-      const newRecipesArr = newRecipes.filter(item => item.id !== id)
-      setNewRecipes(newRecipesArr)
-    }
-  
+    
     return(
       
         <ul className="recipes-container">
-        {newRecipes.map((recipe) => {
-          return (  
-            <RecipeCard recipe ={recipe} deleteRecipe={deleteRecipe}/> 
-          )
-        })}
+        {recipes.map((recipe) => (
+  <RecipeCard key={recipe.id} recipe={recipe} deleteRecipe={onDelete} />
+))}
       </ul>
     )
 }

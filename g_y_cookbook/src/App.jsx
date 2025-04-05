@@ -22,6 +22,9 @@ function App() {
    function addRecipe (recipe) {
     setRecipes([...recipes, recipe])
    }
+   function deleteRecipe (id) {
+    setRecipes(recipes.filter(recipe => recipe.id !== id))
+   }
   
 
  
@@ -43,7 +46,7 @@ function App() {
 
       <Routes>
 
-        <Route path="/" element={<Home recipes={recipes} addRecipe ={addRecipe}/>}></Route>
+        <Route path="/" element={<Home recipes={recipes} addRecipe ={addRecipe} deleteRecipe={deleteRecipe}/>}></Route>
         <Route path="/details/:id" element={<ItemDetails />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>

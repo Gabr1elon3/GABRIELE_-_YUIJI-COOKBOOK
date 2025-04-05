@@ -1,7 +1,7 @@
 import List from "../components/List"
 import { useState } from "react"
 
-export function Home ({recipes, addRecipe}) {
+export function Home ({recipes, addRecipe, deleteRecipe}){ {
 
 const [newRecipe, setNewRecipe] = useState({name:"", calories:"", servings:""})
 console.log(newRecipe)
@@ -52,7 +52,7 @@ console.log(recipes)
         />
         
 
-        <button type="add">
+        <button type="Submit">
           Add
         </button>
       </form> 
@@ -66,8 +66,9 @@ console.log(recipes)
     fontSize: "2rem", // Adjust size if needed
     color: "#2c3e50", // Optional: Change text color
         }}>Recipes</h2>
-      <List recipes={recipes} />
+      <List recipes={recipes} onDelete={deleteRecipe} />
       </>
     )
+}
 }
 
