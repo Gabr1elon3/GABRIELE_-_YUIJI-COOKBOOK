@@ -22,8 +22,16 @@ console.log(recipes)
     return(
 
       <>
-      <h2>Add new recipe</h2>
-      <form onSubmit={submitHanddler}>
+      <h2 style={{position:"absolute",
+          top: "700px", // Matches sidebar height
+          left: "750px", // Adjust this value based on sidebar width
+      }} >Add new recipe</h2>
+      <form onSubmit={submitHanddler}style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "left",
+          
+        }}>
 
         <input
           type="text"
@@ -52,8 +60,8 @@ console.log(recipes)
         />
         
 
-        <button type="Submit">
-          Add
+        <button type="submit" className="add-recipe-btn">
+        Add
         </button>
       </form> 
 
